@@ -69,10 +69,12 @@ const createComment = () => ({
 });
 
 const getComments = () => Array.from({length: getRandomInteger(0, 30)}, createComment);
+const getId = createRandomId();
+const getUrl = createRandomUrl();
 
 const createPhotoDescription = () => ({
-  id: createRandomId(),
-  url: createRandomUrl(),
+  id: getId(),
+  url: getUrl(),
   description: 'описание',
   likes: getRandomInteger(15, 200),
   comments: getComments()
